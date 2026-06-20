@@ -5,8 +5,8 @@
     android:orientation="vertical"
     android:background="@color/colorBackground">
 
-    <!-- Top App Bar -->
-    <include layout="@layout/view_top_app_bar"/>
+    <!-- Top App Bar with back capability -->
+    <include layout="@layout/view_top_app_bar" />
 
     <!-- Divider Line -->
     <View
@@ -14,22 +14,13 @@
         android:layout_height="1dp"
         android:background="#1571787C" />
 
-    <!-- Main Content Frame for screen_home -->
+    <!-- Main Content Frame for screen_genre -->
     <FrameLayout
         android:id="@+id/screen_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.0">
-        <include layout="@layout/screen_home"/>
+        <include layout="@layout/screen_genre"/>
     </FrameLayout>
-
-    <!-- Divider Line -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#1571787C" />
-
-    <!-- Bottom Navigation Bar -->
-    <include layout="@layout/view_bottom_navigation_bar"/>
 
 </LinearLayout>
