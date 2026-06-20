@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Featured Section (The Sapphire Crown Hero Card) -->
+        <FrameLayout
+            android:id="@+id/card_featured"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:focusable="true">
+            
+            <ImageView
+                android:id="@+id/img_featured"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <!-- Dark Overlay to keep text readable -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99000000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="bottom"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Featured"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#261C00"
+                    android:background="#FED65B"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/txt_featured_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Sapphire Crown"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/txt_featured_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chapter 142 just released!"
+                    android:textSize="14sp"
+                    android:textColor="#e0e0e0"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+            
+            <!-- White border or indicator at bottom -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+                <View android:layout_width="6dp" android:layout_height="6dp" android:background="#ffffff" android:layout_margin="3dp"/>
+                <View android:layout_width="6dp" android:layout_height="6dp" android:background="#66ffffff" android:layout_margin="3dp"/>
+                <View android:layout_width="6dp" android:layout_height="6dp" android:background="#66ffffff" android:layout_margin="3dp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Popular Genres -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular Genres"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnBackground"
+            android:layout_marginBottom="12dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="24dp">
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                
+                <TextView
+                    android:id="@+id/genre_chip_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Action"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/genre_chip_romance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Romance"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/genre_chip_fantasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fantasy"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/genre_chip_scifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sci-Fi"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/genre_chip_thriller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thriller"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Recently Updated -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Recently Updated"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorOnBackground" />
+
+            <TextView
+                android:id="@+id/btn_home_view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View All"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <!-- Book Card 1 -->
+            <LinearLayout
+                android:id="@+id/card_book_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+                    <ImageView
+                        android:id="@+id/img_book_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="#20000000" />
+                    <!-- Gold star marker matching Whispers in the Dark screenshot -->
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="top|right"
+                        android:layout_margin="4dp"
+                        android:background="#FED65B"
+                        android:gravity="center"
+                        android:text="⭐"
+                        android:textSize="10sp" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/lbl_book_1_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Whispers in..."
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnBackground"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/lbl_book_1_meta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ch. 84 • 2h"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorOutline" />
+            </LinearLayout>
+
+            <!-- Book Card 2 -->
+            <LinearLayout
+                android:id="@+id/card_book_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="4dp"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+                    <ImageView
+                        android:id="@+id/img_book_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="#20000000" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/lbl_book_2_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Neon..."
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnBackground"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/lbl_book_2_meta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ch. 12 • 5h"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorOutline" />
+            </LinearLayout>
+
+            <!-- Book Card 3 -->
+            <LinearLayout
+                android:id="@+id/card_book_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+                    <ImageView
+                        android:id="@+id/img_book_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:background="#20000000" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/lbl_book_3_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="The Fog..."
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnBackground"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:id="@+id/lbl_book_3_meta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ch. 45 • 1d"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorOutline" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Top Trending Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📈 Top Trending"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnBackground" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1.0" />
+
+                <TextView
+                    android:id="@+id/btn_view_full_chart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full Chart"
+                    android:textSize="11sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1571787C"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Rank 1 component -->
+            <LinearLayout
+                android:id="@+id/rank_row_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorSecondary"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/img_rank_1"
+                    android:layout_width="36dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="8dp"
+                    android:background="#20000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    
+                    <TextView
+                        android:id="@+id/txt_rank_1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blade of the Ancients"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Action / Fantasy • 1.2M views"
+                        android:textSize="11sp"
+                        android:textColor="@color/colorOutline" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Rank 2 component -->
+            <LinearLayout
+                android:id="@+id/rank_row_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOutline"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/img_rank_2"
+                    android:layout_width="36dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="8dp"
+                    android:background="#20000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    
+                    <TextView
+                        android:id="@+id/txt_rank_2_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coffee &amp; Rain"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Romance / Slice of Life • 980k views"
+                        android:textSize="11sp"
+                        android:textColor="@color/colorOutline" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Rank 3 component -->
+            <LinearLayout
+                android:id="@+id/rank_row_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOutline"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/img_rank_3"
+                    android:layout_width="36dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="8dp"
+                    android:background="#20000000" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    
+                    <TextView
+                        android:id="@+id/txt_rank_3_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The Silent Observer"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mystery / Thriller • 850k views"
+                        android:textSize="11sp"
+                        android:textColor="@color/colorOutline" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Premium AD Banner Section -->
+        <FrameLayout
+            android:id="@+id/card_premium_banner"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:background="@drawable/bg_card_rounded"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp">
+            
+            <ImageView
+                android:id="@+id/img_banner_ad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+                
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#33000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:layout_margin="8dp"
+                android:text="AD"
+                android:textSize="8sp"
+                android:textColor="@color/colorOnBackground"
+                android:background="#B3FFFFFF"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unlock Premium Audiobooks"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Try Aura Plus free for 30 days."
+                    android:textSize="11sp"
+                    android:textColor="#e0e0e0"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+</ScrollView>

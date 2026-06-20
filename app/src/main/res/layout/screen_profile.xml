@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Avatar Section -->
+        <FrameLayout
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp">
+            
+            <ImageView
+                android:id="@+id/img_profile_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="#20000000" />
+                
+            <!-- Star Gold Ribbon Indicator badge -->
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom|right"
+                android:background="#FED65B"
+                android:text="⭐"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thanh Nguyen"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnBackground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avid explorer of fictional worlds and architectural histories."
+            android:textSize="13sp"
+            android:textColor="@color/colorOnBackgroundSepia"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:paddingHorizontal="16dp" />
+
+        <!-- VIP Benefits Card Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_gradient_vip"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⭐"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QUYỀN LỢI VIP"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorSecondary"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tải sách không giới hạn lưu trữ offline"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trải nghiệm đọc tinh khiết, không quảng cáo"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đọc sớm nhất các chương truyện mới phát hành"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground" />
+            </LinearLayout>
+
+            <!-- Golden Action Premium Button -->
+            <TextView
+                android:id="@+id/btn_profile_vip_upgrade"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#8B7300"
+                android:text="Nạp VIP ngay →"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Account Options Lined List -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CÀI ĐẶT TÀI KHOẢN"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOutline"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="left"
+            android:paddingHorizontal="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:layout_marginBottom="24dp">
+
+            <!-- Personal Info Option Row -->
+            <LinearLayout
+                android:id="@+id/btn_setting_profile_info"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_chip"
+                    android:text="👤"
+                    android:gravity="center"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Thông tin cá nhân"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorOnBackground" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="˃"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOutline" />
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1571787C" />
+
+            <!-- Password Option Row -->
+            <LinearLayout
+                android:id="@+id/btn_setting_password"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_chip"
+                    android:text="🔒"
+                    android:gravity="center"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Đổi mật khẩu"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorOnBackground" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="˃"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOutline" />
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1571787C" />
+
+            <!-- Transaction Option Row -->
+            <LinearLayout
+                android:id="@+id/btn_setting_transactions"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_chip"
+                    android:text="📜"
+                    android:gravity="center"
+                    android:layout_marginEnd="12dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="Lịch sử giao dịch"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorOnBackground" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="˃"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOutline" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Log out button -->
+        <TextView
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Đăng xuất"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/textRed"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+</ScrollView>

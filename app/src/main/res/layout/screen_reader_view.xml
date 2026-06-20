@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- Scrollable Content Canvas -->
+    <ScrollView
+        android:id="@+id/scroll_reader_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:paddingTop="60dp"
+        android:paddingBottom="130dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:id="@+id/layout_reader_article">
+
+            <TextView
+                android:id="@+id/txt_reader_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Silent Archive"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/txt_reader_p1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The scent of ancient paper, dry and sweet like vanilla, hit him the moment he breached the seal. The Archive wasn't merely a room; it was a cavernous expanse where geometry seemed to surrender to the sheer volume of recorded thought. Row upon row of towering shelves vanished into a gloom that the weak lumiglobes struggled to penetrate."
+                android:textSize="17sp"
+                android:textColor="@color/colorOnBackground"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/txt_reader_p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Elias ran a gloved hand along the spine of a ledger bound in a material he couldn't identify. It felt cold, slightly textured like dormant scales. He was looking for Section 4, Subsection Delta, the repository of the forgotten pacts. The silence here wasn't empty; it was heavy, pregnant with the hushed whispers of billions of unturned pages."
+                android:textSize="17sp"
+                android:textColor="@color/colorOnBackground"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/txt_reader_p3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="He adjusted the ocular lens over his left eye, bringing up the navigation overlay. A faint, glowing path materialized on the dusty floorboards, winding deeper into the stacks. It was said that men had wandered into the Archive seeking a single truth and lost themselves to a thousand others, eventually becoming part of the silent dust that coated everything."
+                android:textSize="17sp"
+                android:textColor="@color/colorOnBackground"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/txt_reader_p4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="As he stepped forward, a faint tremor vibrated through the soles of his boots. Not an earthquake. It was too rhythmic, too deliberate. Something deep within the Archive was shifting. He paused, his breath pluming faintly in the chill air. The legends spoke of Guardians, constructs of ink and iron, but Elias had always dismissed them as bedtime stories meant to keep novices from exploring too deeply."
+                android:textSize="17sp"
+                android:textColor="@color/colorOnBackground"
+                android:lineSpacingMultiplier="1.5" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Top Floating Toolbar -->
+    <LinearLayout
+        android:id="@+id/layout_reader_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#E6FAF9F6"
+        android:gravity="center_vertical"
+        android:elevation="4dp"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:id="@+id/btn_reader_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="←"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="Chapter 4: The Silent Archive"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="12dp"
+            android:gravity="center"/>
+            
+        <View android:layout_width="40dp" android:layout_height="40dp" /> <!-- Spacer -->
+    </LinearLayout>
+
+    <!-- Bottom Reading Controls Bar -->
+    <LinearLayout
+        android:id="@+id/layout_reader_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="#FFF9F9F6"
+        android:elevation="8dp"
+        android:padding="16dp">
+
+        <!-- Progress settings row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/txt_reader_progress_pct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="45%"
+                android:textSize="11sp"
+                android:textColor="@color/colorOutline" />
+
+            <SeekBar
+                android:id="@+id/slider_reader_progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:max="100"
+                android:progress="45" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textSize="11sp"
+                android:textColor="@color/colorOutline" />
+        </LinearLayout>
+
+        <!-- Dynamic Control buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Prev -->
+            <LinearLayout
+                android:id="@+id/btn_reader_prev"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏮"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prev"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_weight="1.0" android:layout_height="1dp" />
+
+            <!-- Settings trigger button -->
+            <LinearLayout
+                android:id="@+id/btn_reader_settings"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚙️"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:textSize="9sp"/>
+            </LinearLayout>
+
+            <View android:layout_width="0dp" android:layout_weight="1.0" android:layout_height="1dp" />
+
+            <!-- Next -->
+            <LinearLayout
+                android:id="@+id/btn_reader_next"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏭"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Backdrop Dim overlay for configuration sheet panel -->
+    <View
+        android:id="@+id/view_reader_darken_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4A000000"
+        android:visibility="gone" />
+
+    <!-- Expandable Reader Custom Settings Panel Card -->
+    <LinearLayout
+        android:id="@+id/card_reader_settings_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_card_rounded"
+        android:elevation="12dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <!-- Drag handle -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:background="@color/colorOutlineVariant"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Background choice Row -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BACKGROUND COLOR"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOutline"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <!-- Light White Theme button -->
+            <FrameLayout
+                android:id="@+id/btn_theme_white"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="#FAF9F6"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:id="@+id/lbl_theme_white_checked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="✔"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Sepia Theme button -->
+            <FrameLayout
+                android:id="@+id/btn_theme_sepia"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="#FAF3E0"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:id="@+id/lbl_theme_sepia_checked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/colorSecondary"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <!-- Dark Theme button -->
+            <FrameLayout
+                android:id="@+id/btn_theme_dark"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="#222422"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:id="@+id/lbl_theme_dark_checked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Typography font size adjustment row -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TYPOGRAPHY"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOutline"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_chip"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/slider_reader_font_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:max="24"
+                android:progress="12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Font selections Literata vs Inter -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/btn_reader_font_literata"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_card_rounded"
+                android:text="Literata (Serif)"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:layout_marginEnd="6dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/btn_reader_font_inter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_chip"
+                android:text="Inter (Sans)"
+                android:textSize="13sp"
+                android:textColor="@color/colorOutline"
+                android:gravity="center"
+                android:layout_marginStart="6dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Offline Premium VIP Download Card Button -->
+        <FrameLayout
+            android:id="@+id/btn_reader_offline_download"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_card_rounded"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📥 Download for Offline"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorSecondary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High Quality Audio &amp; Text"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorOutline"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:text="VIP"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#fed65b"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

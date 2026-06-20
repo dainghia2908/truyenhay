@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Category Title (Header floating already handled, but sub header inside scroll is elegant) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular Epic Fantasy"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Sub Filters Scrolling Bar Row -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="16dp">
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:id="@+id/btn_genre_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Popular"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/bg_pill_accent"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btn_genre_newest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Newest"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btn_genre_completed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completed"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:layout_marginEnd="6dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <TextView
+                    android:id="@+id/btn_genre_ongoing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ongoing"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorOnBackground"
+                    android:background="@drawable/bg_chip"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Grid layout rows (2 Column style) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Grid Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <!-- Book 1 (The Dragon's Legacy - VIP) -->
+                <LinearLayout
+                    android:id="@+id/card_genre_book_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp">
+                        <ImageView
+                            android:id="@+id/img_genre_book_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="#20000000" />
+                        <!-- VIP medallion badge -->
+                        <TextView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="top|right"
+                            android:layout_margin="6dp"
+                            android:background="#FED65B"
+                            android:gravity="center"
+                            android:text="👑"
+                            android:textSize="11sp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Dragon's Legacy"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnBackground"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="E. R. Thorne"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorOutline" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.9"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorSecondary"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" • 120 Ch."
+                            android:textSize="10sp"
+                            android:textColor="@color/colorOutline" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Book 2 (Blade of the Ancients) -->
+                <LinearLayout
+                    android:id="@+id/card_genre_book_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp">
+                        <ImageView
+                            android:id="@+id/img_genre_book_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="#20000000" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Blade of the Ancients"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnBackground"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="J. K. Vance"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorOutline" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.7"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorSecondary"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" • 85 Ch."
+                            android:textSize="10sp"
+                            android:textColor="@color/colorOutline" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Grid Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <!-- Book 3 (Chronicles of Aethelgard - NEW) -->
+                <LinearLayout
+                    android:id="@+id/card_genre_book_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp">
+                        <ImageView
+                            android:id="@+id/img_genre_book_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="#20000000" />
+                        <!-- New Badge Sticker indicator -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|left"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/bg_pill_accent"
+                            android:text="NEW"
+                            android:textStyle="bold"
+                            android:textColor="#ffffff"
+                            android:textSize="8sp"
+                            android:paddingHorizontal="6dp"
+                            android:paddingVertical="3dp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chronicles of Aethelgard"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnBackground"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="S. L. Croft"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorOutline" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 5.0"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorSecondary"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" • 12 Ch."
+                            android:textSize="10sp"
+                            android:textColor="@color/colorOutline" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Book 4 (Sea of Stars and Shadows) -->
+                <LinearLayout
+                    android:id="@+id/card_genre_book_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp">
+                        <ImageView
+                            android:id="@+id/img_genre_book_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="#20000000" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sea of Stars and Shadows"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnBackground"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="M. Rivers"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorOutline" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.5"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorSecondary"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" • 210 Ch."
+                            android:textSize="10sp"
+                            android:textColor="@color/colorOutline" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Grid Row 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Book 5 (The Archivist's Secret - VIP) -->
+                <LinearLayout
+                    android:id="@+id/card_genre_book_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp">
+                        <ImageView
+                            android:id="@+id/img_genre_book_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="#20000000" />
+                        <!-- VIP medallion badge -->
+                        <TextView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_gravity="top|right"
+                            android:layout_margin="6dp"
+                            android:background="#FED65B"
+                            android:gravity="center"
+                            android:text="👑"
+                            android:textSize="11sp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="The Archivist's Secret"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorOnBackground"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="H. G. Wells"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorOutline" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⭐ 4.8"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorSecondary"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" • 55 Ch."
+                            android:textSize="10sp"
+                            android:textColor="@color/colorOutline" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Loading skeleton slot -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_chip">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📖"
+                        android:textSize="24sp" />
+                        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More Coming Soon"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorOutline"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

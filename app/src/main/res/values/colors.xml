@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Reading Palette (Antique Paper & Deep Teal) -->
+    <color name="colorBackground">#faf9f6</color>
+    <color name="colorBackgroundSepia">#f4f3f1</color>
+    <color name="colorBackgroundDark">#222422</color>
+    <color name="colorOnBackground">#1a1c1a</color>
+    <color name="colorOnBackgroundSepia">#41484c</color>
+    <color name="colorOnBackgroundDark">#f1f1ee</color>
+
+    <color name="colorPrimary">#0a4357</color>
+    <color name="colorPrimaryContainer">#2a5b6f</color>
+    <color name="colorOnPrimary">#ffffff</color>
+
+    <!-- Gold Accent / VIP Status -->
+    <color name="colorSecondary">#735c00</color>
+    <color name="colorSecondaryContainer">#fed65b</color>
+    <color name="colorOnSecondaryContainer">#745c00</color>
+
+    <!-- UI Greys & Outlines -->
+    <color name="colorOutline">#71787c</color>
+    <color name="colorOutlineVariant">#c0c7cc</color>
+    <color name="colorSurfaceContainer">#efeeeb</color>
+    <color name="colorSurfaceContainerHigh">#e9e8e5</color>
+    <color name="colorSurfaceContainerLowest">#ffffff</color>
+    <color name="colorSurfaceContainerDark">#2d2f2d</color>
+    
+    <color name="textWhite">#ffffff</color>
+    <color name="textGray">#888888</color>
+    <color name="textDark">#1a1c1a</color>
+    <color name="textRed">#ba1a1a</color>
+</resources>
